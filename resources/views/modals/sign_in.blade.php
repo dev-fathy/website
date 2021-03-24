@@ -14,7 +14,8 @@
                             <img src="{{ asset('fashion/images/p3.png') }}" class="img-fluid" alt="login_image" />
                         </div>
                         <div class="col-md-6">
-                            <form action="#" method="post">
+                            <form action="{{ route('login') }}" method="post">
+                                @csrf
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Your Name</label>
                                     <input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">

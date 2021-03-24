@@ -14,22 +14,23 @@
                         <img src="{{ asset('fashion/images/p3.png') }}" class="img-fluid" alt="login_image" />
                     </div>
                     <div class="col-md-6">
-                        <form action="#" method="post">
+                        <form action="{{ route('register') }}" method="post">
+                            @csrf
                             <div class="form-group">
                                 <label for="recipient-name1" class="col-form-label">Your Name</label>
-                                <input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name1" required="">
+                                <input type="text" class="form-control" placeholder=" " name="name" id="recipient-name1" required="">
                             </div>
                             <div class="form-group">
                                 <label for="recipient-email" class="col-form-label">Email</label>
-                                <input type="email" class="form-control" placeholder=" " name="Email" id="recipient-email" required="">
+                                <input type="email" class="form-control" placeholder=" " name="email" id="recipient-email" required="">
                             </div>
                             <div class="form-group">
                                 <label for="password1" class="col-form-label">Password</label>
-                                <input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
+                                <input type="password" class="form-control" placeholder=" " name="password" id="password1" required="">
                             </div>
                             <div class="form-group">
                                 <label for="password2" class="col-form-label">Confirm Password</label>
-                                <input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
+                                <input type="password" class="form-control" placeholder=" " name="password_confirmation" id="password2" required="">
                             </div>
                             <div class="sub-w3l">
                                 <div class="sub-agile">

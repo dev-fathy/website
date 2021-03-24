@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="{{ asset('fashion/css/owl.carousel.min.css')  }}">
 	<link href="{{ asset('fashion/css/flexslider.css')  }}" type="text/css" rel="stylesheet" media="all">
 	<link href="{{ asset('fashion/css/style.css')  }}" type="text/css" rel="stylesheet" media="all">
+        <link href="{{ asset('fashion/css/main.css')  }}" type="text/css" rel="stylesheet" media="all">
 	<!-- Range-slider-css -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('fashion/css/jquery-ui1.css')  }}">
 
@@ -32,7 +33,6 @@
 	<!-- online-fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-	<!-- //online-fonts -->
-        
+	<!-- //online-fonts --> 
         
 </head>

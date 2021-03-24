@@ -72,43 +72,38 @@
                     </div>
 
                 </div>
-                
 
-<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Hello {{ auth()->user()->name }}
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu1">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Admin Panel</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Profile</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Log Out</a></li>
-    </ul>
-  </div>
-                
-                
-                
-                
-                
-                
-<!--<div class="btn-group admin-button">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Hello {{ auth()->user()->name }}
-  </button>
-  <ul class="dropdown-menu dropdown-menu-end">
-      @if(auth()->user()->hasRole('super_admin'))
-    <li><button class="dropdown-item" type="button">Admin Panel</button></li>
-    @endif
-    <li><button class="dropdown-item" type="button">Log Out</button></li>
-  </ul>
-</div>     -->
-                    
-                    
-                    
-                    
-<!--                @if(auth()->user()->hasRole('super_admin'))           
-                <a class="btn btn-primary" href="{{ url('admin/home') }}" role="button">Admin Panel</a>        
-                @endif 
-                </div>-->
+
+
+
+
+
+                <div class="dropdown admin-button">
+                    <button class="btn btn-dark">Hello {{ auth()->user()->name }} <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                               document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form> 
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="admin-button">
+                    @if(auth()->user()->hasRole('super_admin'))           
+                    <a class="btn btn-primary" href="{{ url('admin/home') }}" role="button">Admin Panel</a>        
+                    @endif
+                </div>
+
             </nav>
             <!-- //top nav -->
             <!-- bottom nav -->

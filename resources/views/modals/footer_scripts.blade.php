@@ -2,11 +2,15 @@
     <script src="{{ asset('fashion/js/jquery-2.2.3.min.js') }}"></script>
     <!-- //js -->
     <!-- script for show signin and signup modal -->
+    
+    @if (!Route::has('register'))
     <script>
         $(document).ready(function () {
             $("#myModal_btn").modal();
         });
     </script>
+    @endif
+    
     <!-- //script for show signin and signup modal -->
     <!-- smooth dropdown -->
     <script>
